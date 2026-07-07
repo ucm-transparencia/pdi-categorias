@@ -9,43 +9,43 @@
 <body style="margin:0;padding:15px;font-family:Arial,sans-serif;background:#f5f5f5">
 <div style="max-width:1200px;margin:0 auto;background:white;border-radius:8px;padding:20px;box-shadow:0 2px 15px rgba(0,0,0,0.08)">
 
-<div style="background:linear-gradient(135deg,#979492 0%,#6b6967 100%);padding:15px 20px;border-radius:6px;margin:-20px -20px 15px -20px;color:white">
+<div style="background:linear-gradient(135deg,#1E7A34 0%,#0F4D20 100%);padding:15px 20px;border-radius:6px;margin:-20px -20px 15px -20px;color:white">
 <h1 style="margin:0 0 4px 0;font-size:22px;font-weight:600">PDI por Categoría</h1>
 <p style="margin:0;font-size:12px;opacity:0.9">Universidad Complutense de Madrid. Datos actualizados trimestralmente</p>
 </div>
 
-<div style="background:#f8f9fa;border-radius:6px;padding:12px;margin-bottom:15px;border-left:3px solid #979492">
+<div style="background:#f8f9fa;border-radius:6px;padding:12px;margin-bottom:15px;border-left:3px solid #1E7A34">
 <div style="margin-bottom:10px">
 <label style="display:block;font-weight:600;color:#333;margin-bottom:6px;font-size:12px">TIPO DE GRÁFICO</label>
-<button onclick="changeChart('bar')" id="btn1" style="padding:6px 12px;background:#979492;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:500;margin-right:6px">Barras</button>
+<button onclick="changeChart('bar')" id="btn1" style="padding:6px 12px;background:#1E7A34;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:500;margin-right:6px">Barras</button>
 <button onclick="changeChart('horizontalBar')" id="btn2" style="padding:6px 12px;background:#e0e0e0;color:#333;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:500;margin-right:6px">Barras Horizontales</button>
 <button onclick="changeChart('pie')" id="btn3" style="padding:6px 12px;background:#e0e0e0;color:#333;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:500;margin-right:6px">Circular</button>
-<button onclick="downloadData()" style="padding:6px 12px;background:#9B8942;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:500">💾 CSV</button>
+<button onclick="downloadData()" style="padding:6px 12px;background:#8a7a2e;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:500">💾 CSV</button>
 </div>
 <label style="display:block;font-weight:600;color:#333;margin-bottom:6px;font-size:12px">OPCIONES</label>
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">
-<button onclick="toggleGender('hombre')" id="btnHombre" style="padding:6px 12px;background:#28a74520;border:2px solid #28a745;color:#333;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">👨 Hombres</button>
-<button onclick="toggleGender('mujer')" id="btnMujer" style="padding:6px 12px;background:#fd7e1420;border:2px solid #fd7e14;color:#333;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">👩 Mujeres</button>
+<button onclick="toggleGender('hombre')" id="btnHombre" style="padding:6px 12px;background:#1E7A3420;border:2px solid #1E7A34;color:#333;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">👨 Hombres</button>
+<button onclick="toggleGender('mujer')" id="btnMujer" style="padding:6px 12px;background:#D4A01720;border:2px solid #D4A017;color:#333;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">👩 Mujeres</button>
 </div>
 <label style="display:block;font-weight:600;color:#333;margin-bottom:6px;font-size:12px">ORDENAR POR</label>
 <div style="display:flex;gap:6px">
-<button onclick="sortBy('alfabetico')" id="sortAlf" style="padding:6px 12px;background:#979492;color:white;border:none;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">A-Z</button>
+<button onclick="sortBy('alfabetico')" id="sortAlf" style="padding:6px 12px;background:#1E7A34;color:white;border:none;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">A-Z</button>
 <button onclick="sortBy('total')" id="sortTotal" style="padding:6px 12px;background:#e0e0e0;color:#333;border:none;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">Total</button>
 <button onclick="sortBy('hombres')" id="sortHombre" style="padding:6px 12px;background:#e0e0e0;color:#333;border:none;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">Hombres</button>
 <button onclick="sortBy('mujeres')" id="sortMujer" style="padding:6px 12px;background:#e0e0e0;color:#333;border:none;border-radius:4px;cursor:pointer;font-size:11px;font-weight:500">Mujeres</button>
 </div>
 </div>
 
-<div style="background:white;padding:12px;border-radius:6px;margin-bottom:15px;box-shadow:0 1px 6px rgba(151,148,146,0.12)">
+<div style="background:white;padding:12px;border-radius:6px;margin-bottom:15px;box-shadow:0 1px 6px rgba(30,122,52,0.12)">
 <canvas id="chart"></canvas>
 </div>
 
-<div style="background:white;padding:15px;border-radius:6px;box-shadow:0 1px 6px rgba(151,148,146,0.12);overflow-x:auto">
-<h3 style="margin:0 0 10px 0;color:#6b6967;font-size:16px">Tabla de datos</h3>
+<div style="background:white;padding:15px;border-radius:6px;box-shadow:0 1px 6px rgba(30,122,52,0.12);overflow-x:auto">
+<h3 style="margin:0 0 10px 0;color:#0F4D20;font-size:16px">Tabla de datos</h3>
 <div id="table"></div>
 </div>
 
-<p style="text-align:center;color:#979492;font-size:11px;margin-top:12px">Portal de Transparencia UCM · Fuente: SIDI (Sistema Integrado de Datos Institucionales) · Datos actualizados: 01/04/2026 · Extraídos el 07/04/2026</p>
+<p style="text-align:center;color:#979492;font-size:11px;margin-top:12px">Portal de Transparencia UCM · Fuente: SIDI (Sistema Integrado de Datos Institucionales) · Datos actualizados: 01/07/2026 · Extraídos el 07/07/2026</p>
 
 </div>
 
@@ -53,24 +53,24 @@
 let c,chartType='bar',sortOrder='alfabetico';
 let showHombre=true,showMujer=true;
 let originalData=[
-{cat:'Asociado',h:517,m:430,t:947},
+{cat:'Asociado',h:527,m:434,t:961},
 {cat:'Asociado CC. Salud',h:0,m:1,t:1},
 {cat:'Asociado Interino',h:3,m:2,t:5},
-{cat:'Asociado/a CC. Salud',h:392,m:600,t:992},
-{cat:'Ayudante',h:38,m:35,t:73},
-{cat:'Ayudante Doctor',h:572,m:646,t:1218},
+{cat:'Asociado/a CC. Salud',h:389,m:600,t:989},
+{cat:'Ayudante',h:31,m:28,t:59},
+{cat:'Ayudante Doctor',h:583,m:648,t:1231},
 {cat:'Catedrático de Escuela Universitaria',h:12,m:6,t:18},
-{cat:'Catedrático de Universidad',h:444,m:272,t:716},
+{cat:'Catedrático de Universidad',h:452,m:286,t:738},
 {cat:'Catedrático de Universidad Vinculado',h:32,m:2,t:34},
-{cat:'Colaborador',h:13,m:14,t:27},
-{cat:'Contratado Doctor',h:329,m:417,t:746},
-{cat:'Contratado Doctor Interino',h:2,m:0,t:2},
+{cat:'Colaborador',h:13,m:13,t:26},
+{cat:'Contratado Doctor',h:329,m:421,t:750},
+{cat:'Contratado Doctor Interino',h:1,m:0,t:1},
 {cat:'Distinguido',h:1,m:1,t:2},
 {cat:'Emérito/a',h:52,m:22,t:74},
-{cat:'Profesor Permanente Laboral',h:141,m:209,t:350},
-{cat:'Sustituto',h:152,m:125,t:277},
+{cat:'Profesor Permanente Laboral',h:147,m:219,t:366},
+{cat:'Sustituto',h:140,m:115,t:255},
 {cat:'Titular de Escuela Universitaria',h:9,m:11,t:20},
-{cat:'Titular de Universidad',h:682,m:734,t:1416},
+{cat:'Titular de Universidad',h:692,m:746,t:1438},
 {cat:'Titular de Universidad Interino',h:3,m:3,t:6},
 {cat:'Titular de Universidad Vinculado',h:45,m:21,t:66},
 {cat:'Visitante',h:2,m:2,t:4}
@@ -94,8 +94,8 @@ if(showHombre){
 datasets.push({
 label:'Hombres',
 data:data.map(d=>d.h),
-backgroundColor:'#28a745',
-borderColor:'#28a745',
+backgroundColor:'#1E7A34',
+borderColor:'#1E7A34',
 borderWidth:1
 });
 }
@@ -104,8 +104,8 @@ if(showMujer){
 datasets.push({
 label:'Mujeres',
 data:data.map(d=>d.m),
-backgroundColor:'#fd7e14',
-borderColor:'#fd7e14',
+backgroundColor:'#D4A017',
+borderColor:'#D4A017',
 borderWidth:1
 });
 }
@@ -127,13 +127,13 @@ position:'bottom',
 labels:{padding:8,font:{size:10,weight:'500'},color:'#333',boxWidth:10,boxHeight:10}
 },
 tooltip:{
-backgroundColor:'rgba(107,105,103,0.95)',
+backgroundColor:'rgba(15,77,32,0.95)',
 padding:10,
 titleFont:{size:11},
 bodyFont:{size:11},
 titleColor:'#fff',
 bodyColor:'#fff',
-borderColor:'#979492',
+borderColor:'#1E7A34',
 borderWidth:1,
 callbacks:{
 footer:function(items){
@@ -147,7 +147,7 @@ return '\nTotal: '+total.toLocaleString('es-ES');
 scales:chartType!='pie'?{
 y:{
 beginAtZero:true,
-grid:{color:'rgba(151,148,146,0.1)'},
+grid:{color:'rgba(30,122,52,0.1)'},
 ticks:{font:{size:9},color:'#333',callback:v=>v.toLocaleString('es-ES')}
 },
 x:{
@@ -167,7 +167,7 @@ if(chartType=='horizontalBar'){
 config.options.scales={
 x:{
 beginAtZero:true,
-grid:{color:'rgba(151,148,146,0.1)'},
+grid:{color:'rgba(30,122,52,0.1)'},
 ticks:{font:{size:9},color:'#333',callback:v=>v.toLocaleString('es-ES')}
 },
 y:{
@@ -182,11 +182,11 @@ c=new Chart(ctx,config);
 
 function changeChart(type){
 chartType=type;
-document.getElementById('btn1').style.background=type=='bar'?'#979492':'#e0e0e0';
+document.getElementById('btn1').style.background=type=='bar'?'#1E7A34':'#e0e0e0';
 document.getElementById('btn1').style.color=type=='bar'?'white':'#333';
-document.getElementById('btn2').style.background=type=='horizontalBar'?'#979492':'#e0e0e0';
+document.getElementById('btn2').style.background=type=='horizontalBar'?'#1E7A34':'#e0e0e0';
 document.getElementById('btn2').style.color=type=='horizontalBar'?'white':'#333';
-document.getElementById('btn3').style.background=type=='pie'?'#979492':'#e0e0e0';
+document.getElementById('btn3').style.background=type=='pie'?'#1E7A34':'#e0e0e0';
 document.getElementById('btn3').style.color=type=='pie'?'white':'#333';
 init();
 }
@@ -205,13 +205,13 @@ updateTable();
 
 function sortBy(order){
 sortOrder=order;
-document.getElementById('sortAlf').style.background=order=='alfabetico'?'#979492':'#e0e0e0';
+document.getElementById('sortAlf').style.background=order=='alfabetico'?'#1E7A34':'#e0e0e0';
 document.getElementById('sortAlf').style.color=order=='alfabetico'?'white':'#333';
-document.getElementById('sortTotal').style.background=order=='total'?'#979492':'#e0e0e0';
+document.getElementById('sortTotal').style.background=order=='total'?'#1E7A34':'#e0e0e0';
 document.getElementById('sortTotal').style.color=order=='total'?'white':'#333';
-document.getElementById('sortHombre').style.background=order=='hombres'?'#979492':'#e0e0e0';
+document.getElementById('sortHombre').style.background=order=='hombres'?'#1E7A34':'#e0e0e0';
 document.getElementById('sortHombre').style.color=order=='hombres'?'white':'#333';
-document.getElementById('sortMujer').style.background=order=='mujeres'?'#979492':'#e0e0e0';
+document.getElementById('sortMujer').style.background=order=='mujeres'?'#1E7A34':'#e0e0e0';
 document.getElementById('sortMujer').style.color=order=='mujeres'?'white':'#333';
 init();
 updateTable();
@@ -219,28 +219,28 @@ updateTable();
 
 function updateTable(){
 let data=getSortedData();
-let h='<table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="background:linear-gradient(135deg,#979492,#6b6967);color:white">';
+let h='<table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="background:linear-gradient(135deg,#1E7A34,#0F4D20);color:white">';
 h+='<th style="padding:8px;text-align:left;font-weight:600;font-size:11px">Categoría</th>';
-if(showHombre)h+='<th style="padding:8px;text-align:right;font-weight:600;font-size:11px;background:rgba(40,167,69,0.3)">Hombres</th>';
-if(showMujer)h+='<th style="padding:8px;text-align:right;font-weight:600;font-size:11px;background:rgba(253,126,20,0.3)">Mujeres</th>';
-h+='<th style="padding:8px;text-align:right;background:rgba(0,0,0,0.15);font-weight:600;font-size:11px">TOTAL</th></tr></thead><tbody>';
+if(showHombre)h+='<th style="padding:8px;text-align:right;font-weight:600;font-size:11px;background:rgba(255,255,255,0.15)">Hombres</th>';
+if(showMujer)h+='<th style="padding:8px;text-align:right;font-weight:600;font-size:11px;background:rgba(212,160,23,0.35)">Mujeres</th>';
+h+='<th style="padding:8px;text-align:right;background:rgba(0,0,0,0.2);font-weight:600;font-size:11px">TOTAL</th></tr></thead><tbody>';
 
 data.forEach((d,i)=>{
 let bg=i%2?'white':'#fafafa';
-h+='<tr style="background:'+bg+';transition:background 0.2s" onmouseover="this.style.background=\'#f5f5f5\'" onmouseout="this.style.background=\''+bg+'\'"><td style="padding:7px;font-weight:500;color:#6b6967;font-size:11px">'+d.cat+'</td>';
-if(showHombre)h+='<td style="padding:7px;text-align:right;color:#28a745;font-weight:500">'+d.h.toLocaleString('es-ES')+'</td>';
-if(showMujer)h+='<td style="padding:7px;text-align:right;color:#fd7e14;font-weight:500">'+d.m.toLocaleString('es-ES')+'</td>';
-h+='<td style="padding:7px;text-align:right;font-weight:700;background:rgba(151,148,146,0.08);color:#6b6967">'+d.t.toLocaleString('es-ES')+'</td></tr>';
+h+='<tr style="background:'+bg+';transition:background 0.2s" onmouseover="this.style.background=\'#eaf5ed\'" onmouseout="this.style.background=\''+bg+'\'"><td style="padding:7px;font-weight:500;color:#0F4D20;font-size:11px">'+d.cat+'</td>';
+if(showHombre)h+='<td style="padding:7px;text-align:right;color:#1E7A34;font-weight:500">'+d.h.toLocaleString('es-ES')+'</td>';
+if(showMujer)h+='<td style="padding:7px;text-align:right;color:#B8860B;font-weight:500">'+d.m.toLocaleString('es-ES')+'</td>';
+h+='<td style="padding:7px;text-align:right;font-weight:700;background:rgba(30,122,52,0.06);color:#0F4D20">'+d.t.toLocaleString('es-ES')+'</td></tr>';
 });
 
 let totalH=originalData.reduce((sum,d)=>sum+d.h,0);
 let totalM=originalData.reduce((sum,d)=>sum+d.m,0);
 let totalT=originalData.reduce((sum,d)=>sum+d.t,0);
 
-h+='<tr style="background:#e8e8e8;font-weight:700"><td style="padding:10px;color:#6b6967;font-size:12px">TOTAL</td>';
-if(showHombre)h+='<td style="padding:10px;text-align:right;color:#28a745;font-size:12px">'+totalH.toLocaleString('es-ES')+'</td>';
-if(showMujer)h+='<td style="padding:10px;text-align:right;color:#fd7e14;font-size:12px">'+totalM.toLocaleString('es-ES')+'</td>';
-h+='<td style="padding:10px;text-align:right;background:rgba(151,148,146,0.15);color:#6b6967;font-size:12px">'+totalT.toLocaleString('es-ES')+'</td></tr>';
+h+='<tr style="background:#e2f0e5;font-weight:700"><td style="padding:10px;color:#0F4D20;font-size:12px">TOTAL</td>';
+if(showHombre)h+='<td style="padding:10px;text-align:right;color:#1E7A34;font-size:12px">'+totalH.toLocaleString('es-ES')+'</td>';
+if(showMujer)h+='<td style="padding:10px;text-align:right;color:#B8860B;font-size:12px">'+totalM.toLocaleString('es-ES')+'</td>';
+h+='<td style="padding:10px;text-align:right;background:rgba(30,122,52,0.15);color:#0F4D20;font-size:12px">'+totalT.toLocaleString('es-ES')+'</td></tr>';
 
 h+='</tbody></table>';
 document.getElementById('table').innerHTML=h;
